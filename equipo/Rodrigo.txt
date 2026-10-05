@@ -1,0 +1,4 @@
+Nombre: Rodrigo
+Apellido: Castillo
+Grupo: MedPass
+Rol o responsabilidad principal: Backend
