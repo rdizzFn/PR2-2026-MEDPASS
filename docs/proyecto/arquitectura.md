@@ -111,4 +111,22 @@ El funcionamiento del sistema sigue este proceso:
 2. Accede mediante el formulario de inicio de sesión.
 3. El sistema verifica las credenciales y el estado del usuario en la base de datos.
 4. Según el rol, se habilitan las funciones correspondientes.
-5. El
+5. El usuario interactúa con los formularios del sistema.
+6. Las operaciones solicitadas se realizan mediante la clase `ConexionBD.cs`.
+7. SQL Server almacena o devuelve la información solicitada.
+
+## 8. Configuración del entorno
+
+Para ejecutar el proyecto se requiere:
+
+- Visual Studio.
+- .NET Framework 4.7.2.
+- SQL Server.
+- La base de datos `BD_ReservasMedicas`.
+- Una cadena de conexión configurada para el servidor SQL Server del entorno donde se ejecute la aplicación.
+
+La cadena de conexión debe adaptarse al servidor de cada desarrollador y no depender del nombre de una computadora específica.
+
+## 9. Consideraciones
+
+La arquitectura descrita corresponde a la organización identificada en el código fuente actual. La clase `ConexionBD.cs` concentra las operaciones de acceso a datos, mientras que los formularios permiten interactuar con las diferentes funcionalidades del sistema.
