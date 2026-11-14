@@ -1,0 +1,22 @@
+# Archivos generados por Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Archivos temporales
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+
+# Archivos de compilación
+*.pdb
+*.exe
+*.dll
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
