@@ -1,3 +1,54 @@
+# MEDPASS - Sistema de Gestión de Reservas Médicas
+
+## Problema
+
+En muchos centros médicos, la gestión de reservas se realiza mediante llamadas, mensajes o registros manuales. Esto puede generar errores, duplicación de citas y problemas con los horarios disponibles de los médicos.
+
+## Propósito
+
+MedPass busca centralizar la gestión de pacientes, médicos, horarios, citas, historiales médicos y pagos en un solo sistema.
+
+## Usuarios
+
+El sistema está dirigido principalmente a:
+
+- Administradores
+- Recepcionistas
+- Médicos
+
+También está orientado a clínicas y consultorios médicos.
+
+## Objetivo
+
+Desarrollar un sistema que permita organizar pacientes y médicos, consultar horarios disponibles, registrar citas y facilitar la modificación o cancelación de reservas.
+
+## Descripción general
+
+MedPass será desarrollado utilizando C# y .NET Framework, con SQL Server para la gestión de la base de datos.
+
+El sistema contempla diferentes roles:
+
+- **Administrador:** gestión de usuarios y médicos.
+- **Recepcionista:** gestión de pacientes, citas y pagos.
+- **Médico:** consulta de citas, pacientes, horarios e historiales médicos.
+
+## Integrantes
+
+| **Integrante** | **Rol** |
+|---|---|
+| Rodrigo Castillo | Backend y Base de Datos |
+| Andres Martinez | Frontend |
+
+## Tecnologías
+
+- C#
+- Visual Studio
+- .NET Framework 4.7.2
+- SQL Server
+- SQL Server Management Studio
+- Draw.io
+- GitHub
+
 ## Funcionalidades del sistema
 
 MedPass contempla los siguientes módulos:
@@ -22,6 +73,7 @@ PR2-2026-MEDPASS/
 ├── docs/
 │   ├── equipo/
 │   ├── planificacion/
+│   ├── presentaciones/
 │   └── proyecto/
 ├── equipo/
 ├── README.md
@@ -32,17 +84,32 @@ PR2-2026-MEDPASS/
 └── SECURITY.md
 ```
 
-## Documentación del proyecto
+## Documentación
+
+La documentación del proyecto se encuentra organizada en la carpeta `docs`.
+
+- `docs/proyecto/` - Informe del proyecto, flujograma y documentación técnica.
+- `docs/planificacion/` - Gantt, planificación y seguimiento del proyecto.
+- `docs/presentaciones/` - Presentación del proyecto.
+- `docs/equipo/` - Integrantes, roles y acuerdos de trabajo.
+
+### Documentación técnica
 
 - [Visión y alcance](docs/proyecto/vision-y-alcance.md)
-- [Requisitos](docs/proyecto/requisitos.md)
-- [Arquitectura](docs/proyecto/arquitectura.md)
+- [Requisitos funcionales y no funcionales](docs/proyecto/requisitos.md)
+- [Arquitectura del sistema](docs/proyecto/arquitectura.md)
 - [Modelo de datos](docs/proyecto/modelo-de-datos.md)
 - [Informe del proyecto](docs/proyecto/Informe-Proyecto%20Final%20(1).pdf)
 - [Flujograma](docs/proyecto/flujograma.pdf)
-- [Planificación](docs/planificacion/planificacion.md)
+
+### Planificación
+
+- [Planificación del proyecto](docs/planificacion/planificacion.md)
 - [Cronograma Gantt](docs/planificacion/gantt.pdf)
-- [Seguimiento](docs/planificacion/seguimiento.md)
+- [Seguimiento del proyecto](docs/planificacion/seguimiento.md)
+
+### Equipo de trabajo
+
 - [Integrantes y roles](docs/equipo/integrantes-y-roles.md)
 - [Acuerdos de trabajo](docs/equipo/acuerdos-de-trabajo.md)
 
@@ -68,10 +135,8 @@ La cadena de conexión debe adaptarse a la instancia de SQL Server del equipo do
 
 Las instrucciones de instalación, configuración de la base de datos y ejecución se completarán junto con la incorporación de los archivos del proyecto y los scripts de SQL Server al repositorio.
 
-## Estado del proyecto
+## Estado actual
 
 El sistema cuenta con módulos desarrollados en C# Windows Forms y una base de datos implementada en SQL Server.
-
-Actualmente se está trabajando en la organización del repositorio, la documentación técnica y la preparación de los archivos necesarios para facilitar su instalación, ejecución y mantenimiento.
 
 Actualmente se está trabajando en la organización del repositorio, la documentación técnica y la preparación de los archivos necesarios para facilitar su instalación, ejecución y mantenimiento.
