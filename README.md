@@ -1,62 +1,77 @@
-# MEDPASS - Sistema de Gestión de Reservas Médicas
+## Funcionalidades del sistema
 
-## Problema
+MedPass contempla los siguientes módulos:
 
-En muchos centros médicos, la gestión de reservas se realiza mediante llamadas, mensajes o registros manuales. Esto puede generar errores, duplicación de citas y problemas con los horarios disponibles de los médicos.
+- Inicio de sesión y control de acceso según el tipo de usuario.
+- Gestión de pacientes.
+- Gestión de médicos y especialidades.
+- Registro y administración de citas médicas.
+- Consulta de horarios de los médicos.
+- Gestión de consultas e historiales clínicos.
+- Derivación de pacientes.
+- Administración de pagos.
+- Gestión de perfiles de usuario.
 
-## Propósito
+## Estructura del repositorio
 
-MedPass busca centralizar la gestión de pacientes, médicos, horarios, citas, historiales médicos y pagos en un solo sistema.
+```text
+PR2-2026-MEDPASS/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── PULL_REQUEST_TEMPLATE.md
+├── docs/
+│   ├── equipo/
+│   ├── planificacion/
+│   └── proyecto/
+├── equipo/
+├── README.md
+├── .gitignore
+├── .editorconfig
+├── CONTRIBUTING.md
+├── CHANGELOG.md
+└── SECURITY.md
+```
 
-## Usuarios
+## Documentación del proyecto
 
-El sistema está dirigido principalmente a:
+- [Visión y alcance](docs/proyecto/vision-y-alcance.md)
+- [Requisitos](docs/proyecto/requisitos.md)
+- [Arquitectura](docs/proyecto/arquitectura.md)
+- [Modelo de datos](docs/proyecto/modelo-de-datos.md)
+- [Informe del proyecto](docs/proyecto/Informe-Proyecto%20Final%20(1).pdf)
+- [Flujograma](docs/proyecto/flujograma.pdf)
+- [Planificación](docs/planificacion/planificacion.md)
+- [Cronograma Gantt](docs/planificacion/gantt.pdf)
+- [Seguimiento](docs/planificacion/seguimiento.md)
+- [Integrantes y roles](docs/equipo/integrantes-y-roles.md)
+- [Acuerdos de trabajo](docs/equipo/acuerdos-de-trabajo.md)
 
-- Administradores
-- Recepcionistas
-- Médicos
+## Requisitos del entorno
 
-También está orientado a clínicas y consultorios médicos.
+Para ejecutar el sistema se requiere:
 
-## Objetivo
+- Windows.
+- Visual Studio.
+- .NET Framework 4.7.2.
+- Microsoft SQL Server.
+- SQL Server Management Studio.
 
-Desarrollar un sistema que permita organizar pacientes y médicos, consultar horarios disponibles, registrar citas y facilitar la modificación o cancelación de reservas.
+## Base de datos
 
-## Descripción general
+El sistema utiliza SQL Server y una base de datos denominada `BD_ReservasMedicas`.
 
-MedPass será desarrollado utilizando C# y .NET Framework, con SQL Server para la gestión de la base de datos.
+La aplicación utiliza ADO.NET para establecer la conexión y realizar operaciones con la base de datos.
 
-El sistema contempla diferentes roles:
+La cadena de conexión debe adaptarse a la instancia de SQL Server del equipo donde se ejecute el proyecto.
 
-- **Administrador:** gestión de usuarios y médicos.
-- **Recepcionista:** gestión de pacientes, citas y pagos.
-- **Médico:** consulta de citas, pacientes, horarios e historiales médicos.
+## Instalación y ejecución
 
-## Integrantes
+Las instrucciones de instalación, configuración de la base de datos y ejecución se completarán junto con la incorporación de los archivos del proyecto y los scripts de SQL Server al repositorio.
 
-| Integrante | Rol |
-|---|---|
-| Rodrigo Castillo | Backend y Base de Datos |
-| Andres Martinez | Frontend |
+## Estado del proyecto
 
-## Tecnologías
+El sistema cuenta con módulos desarrollados en C# Windows Forms y una base de datos implementada en SQL Server.
 
-- C#
-- Visual Studio
-- .NET Framework
-- SQL Server
-- SQL Server Management Studio
-- Draw.io
-- GitHub
+Actualmente se está trabajando en la organización del repositorio, la documentación técnica y la preparación de los archivos necesarios para facilitar su instalación, ejecución y mantenimiento.
 
-## Documentación
-
-La documentación del proyecto se encuentra organizada en la carpeta `docs`.
-
-- `docs/proyecto/` - Informe del proyecto y flujograma.
-- `docs/planificacion/` - Gantt del proyecto.
-- `docs/presentaciones/` - Presentación del proyecto.
-
-## Estado actual
-
-El repositorio se encuentra en etapa de organización y preparación del proyecto. Actualmente contiene la información del equipo, documentación del proyecto, flujograma, planificación mediante Gantt y presentación.
+Actualmente se está trabajando en la organización del repositorio, la documentación técnica y la preparación de los archivos necesarios para facilitar su instalación, ejecución y mantenimiento.
