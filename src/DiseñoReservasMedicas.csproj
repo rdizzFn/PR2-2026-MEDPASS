@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6488FEBD-DD71-4764-A04A-4F8DD852EBA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DiseñoReservasMedicas</RootNamespace>
+    <AssemblyName>DiseñoReservasMedicas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.8\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- frmAdmin -->
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="Presentaciones\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <!-- frmCitas -->
+    <Compile Include="Presentaciones\frmCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas.Designer.cs">
+      <DependentUpon>frmCitas.cs</DependentUpon>
+    </Compile>
+    <!-- frmCitas_AñadirPaciente -->
+    <Compile Include="Presentaciones\frmCitas_AñadirPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_AñadirPaciente.Designer.cs">
+      <DependentUpon>frmCitas_AñadirPaciente.cs</DependentUpon>
+    </Compile>
+    <!-- frmCitas-AñadirInformacion -->
+    <Compile Include="Presentaciones\frmCitas-AñadirInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas-AñadirInformacion.Designer.cs">
+      <DependentUpon>frmCitas-AñadirInformacion.cs</DependentUpon>
+    </Compile>
+    <!-- frmInicio -->
+    <Compile Include="Presentaciones\frmCitas_Cancelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Cancelar.Designer.cs">
+      <DependentUpon>frmCitas_Cancelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_HistorialClinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_HistorialClinico.Designer.cs">
+      <DependentUpon>frmCitas_HistorialClinico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Nueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Nueva.Designer.cs">
+      <DependentUpon>frmCitas_Nueva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Panel.Designer.cs">
+      <DependentUpon>frmCitas_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Programadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmCitas_Programadas.Designer.cs">
+      <DependentUpon>frmCitas_Programadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <!-- frmLogin -->
+    <Compile Include="Presentaciones\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <!-- frmPrincipal -->
+    <Compile Include="Presentaciones\frmMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico.Designer.cs">
+      <DependentUpon>frmMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_BuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_BuscarPaciente.Designer.cs">
+      <DependentUpon>frmMedico_BuscarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Citas.Designer.cs">
+      <DependentUpon>frmMedico_Citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_CitasHoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_CitasHoy.Designer.cs">
+      <DependentUpon>frmMedico_CitasHoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_DerivarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_DerivarPaciente.Designer.cs">
+      <DependentUpon>frmMedico_DerivarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_HistorialClinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_HistorialClinico.Designer.cs">
+      <DependentUpon>frmMedico_HistorialClinico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_HistorialPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_HistorialPaciente.Designer.cs">
+      <DependentUpon>frmMedico_HistorialPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_ImprimirHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_ImprimirHistorial.Designer.cs">
+      <DependentUpon>frmMedico_ImprimirHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Inicio.Designer.cs">
+      <DependentUpon>frmMedico_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_MisHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_MisHorarios.Designer.cs">
+      <DependentUpon>frmMedico_MisHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_Pacientes.Designer.cs">
+      <DependentUpon>frmMedico_Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_ProximasCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMedico_ProximasCitas.Designer.cs">
+      <DependentUpon>frmMedico_ProximasCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmMiPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmMiPerfil.Designer.cs">
+      <DependentUpon>frmMiPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\frmVerPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\frmVerPacientes.Designer.cs">
+      <DependentUpon>frmVerPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <!-- Recursos de los formularios -->
+    <EmbeddedResource Include="Presentaciones\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas.resx">
+      <DependentUpon>frmCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_AñadirPaciente.resx">
+      <DependentUpon>frmCitas_AñadirPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas-AñadirInformacion.resx">
+      <DependentUpon>frmCitas-AñadirInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_Cancelar.resx">
+      <DependentUpon>frmCitas_Cancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_HistorialClinico.resx">
+      <DependentUpon>frmCitas_HistorialClinico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_Nueva.resx">
+      <DependentUpon>frmCitas_Nueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_Panel.resx">
+      <DependentUpon>frmCitas_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmCitas_Programadas.resx">
+      <DependentUpon>frmCitas_Programadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico.resx">
+      <DependentUpon>frmMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_BuscarPaciente.resx">
+      <DependentUpon>frmMedico_BuscarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_Citas.resx">
+      <DependentUpon>frmMedico_Citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_CitasHoy.resx">
+      <DependentUpon>frmMedico_CitasHoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_DerivarPaciente.resx">
+      <DependentUpon>frmMedico_DerivarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_HistorialClinico.resx">
+      <DependentUpon>frmMedico_HistorialClinico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_HistorialPaciente.resx">
+      <DependentUpon>frmMedico_HistorialPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_ImprimirHistorial.resx">
+      <DependentUpon>frmMedico_ImprimirHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_Inicio.resx">
+      <DependentUpon>frmMedico_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_MisHorarios.resx">
+      <DependentUpon>frmMedico_MisHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_Pacientes.resx">
+      <DependentUpon>frmMedico_Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMedico_ProximasCitas.resx">
+      <DependentUpon>frmMedico_ProximasCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmMiPerfil.resx">
+      <DependentUpon>frmMiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\frmVerPacientes.resx">
+      <DependentUpon>frmVerPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25281%2529.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25282%2529.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25282%25291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25282%25292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25282%25293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 26 ago 2026, 12_22_44 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial-de-transacciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina-de-inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina-de-inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-usuario-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-encuentra-hombre-usuario-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-encuentra-hombre-usuario-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-configuración-del-administrador-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4a94939db54040952bc3d98db1db817.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6073873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8608769.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 14 sept 2026, 09_29_25 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 14 sept 2026, 09_32_13 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 14 sept 2026, 09_34_20 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original-3f028f30f7f023f692a0d341f2ca3741.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5083142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50831421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3652267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9503428.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8295205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\921059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recuadros_sin_fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2723508.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 24 sept 2026, 06_28_42 p.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1476220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3712250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed02ed3d-08da-4316-a639-6111c4d76fb9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ed02ed3d-08da-4316-a639-6111c4d76fb91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd62f9d4-91d0-476f-860c-993a8f39f6d7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd62f9d4-91d0-476f-860c-993a8f39f6d71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd62f9d4-91d0-476f-860c-993a8f39f6d72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\244af882-eee1-4fb5-8b7a-9800c71daeec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\244af882-eee1-4fb5-8b7a-9800c71daeec1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\875311d1-8f81-4cfe-b605-bf38fdd07652.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\875311d1-8f81-4cfe-b605-bf38fdd076521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 29 sept 2026, 11_02_02 a.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 29 sept 2026, 11_02_55 a.m..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1420576.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25398.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\253981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c745eeec-93a1-484c-a31c-caf662cc06f8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1fad6bba-e3d7-432c-a5ab-b1d37c06910c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1fad6bba-e3d7-432c-a5ab-b1d37c06910c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1fad6bba-e3d7-432c-a5ab-b1d37c06910c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1fad6bba-e3d7-432c-a5ab-b1d37c06910c3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54d4355c-65ad-45db-a3bf-aeeafa178801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54d4355c-65ad-45db-a3bf-aeeafa1788011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54d4355c-65ad-45db-a3bf-aeeafa1788012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54d4355c-65ad-45db-a3bf-aeeafa1788013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54d4355c-65ad-45db-a3bf-aeeafa1788014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flowing-blue-waves-stockcake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel-gradient-background-in-sky-blue-color-with-relaxing-pattern-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-orange-gradient-polygon-wallpaper-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-orange-gradient-polygon-wallpaper-vector1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-fluid-blue-wave-banner-background-illustration-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-fluid-blue-wave-banner-background-illustration-vector1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-abstract-blue-waves-vector-png-image_6667215.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-blue-wavy-shapes-on-transparent-background-curved-vector-png-image_11594964.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-blue-wavy-shapes-on-transparent-background-curved-vector-png-image_115949641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-wave-blue-background-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8312969.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83129691.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-parte-trasera-de-tarjeta-bancaria-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6289.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62891.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reloj-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reloj-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-earth-tone-background-soft-vintage-style.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemini-svg%2520%25282%25294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1342449718-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1371944453-612x612.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
