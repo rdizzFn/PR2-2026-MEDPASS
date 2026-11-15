@@ -6,15 +6,17 @@ Este archivo registra los cambios importantes realizados durante el desarrollo d
 
 ### Agregado
 - Creación del repositorio del proyecto.
-- Incorporación de la documentación inicial.
-- Definición de la visión y alcance del sistema.
-- Registro de requisitos funcionales y no funcionales.
-- Documentación de la arquitectura del sistema.
-- Documentación del modelo de datos.
-- Incorporación de archivos de configuración para el repositorio.
+- Incorporación de la documentación inicial del sistema.
+- Definición de la visión, alcance y requisitos.
+- Documentación de la arquitectura y modelo de datos.
+- Incorporación de archivos de configuración del repositorio.
+- Integración de los archivos principales del código fuente.
+- Incorporación de formularios de Windows Forms.
+- Incorporación de recursos gráficos e imágenes del proyecto.
+- Incorporación del script de creación de la base de datos.
+- Organización de la documentación del equipo y planificación.
 
 ### Pendiente
-- Integración del código fuente del sistema.
-- Incorporación de los scripts de la base de datos.
-- Organización de las pruebas del sistema.
-- Actualización de la documentación según los avances del proyecto.
+- Organización e incorporación de pruebas del sistema.
+- Ejecución y documentación de pruebas de los módulos.
+- Actualización de la documentación conforme avance el desarrollo.
