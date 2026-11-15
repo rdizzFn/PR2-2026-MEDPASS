@@ -42,4 +42,4 @@ Establecer acuerdos de organización y colaboración entre los integrantes duran
 
 Los integrantes deben aplicar estos acuerdos durante el desarrollo para facilitar la colaboración, evitar conflictos y mantener un avance organizado del proyecto.
 
-Los integrantes deben aplicar estos acuerdos durante el desarrollo para facilitar la colaboración, evitar conflictos y mantener un avance organizado del proyecto.
+
