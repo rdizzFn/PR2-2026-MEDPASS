@@ -133,7 +133,7 @@ La cadena de conexión debe adaptarse a la instancia de SQL Server del equipo do
 
 ## Instalación y ejecución
 
-Las instrucciones de instalación, configuración de la base de datos y ejecución se completarán junto con la incorporación de los archivos del proyecto y los scripts de SQL Server al repositorio.
+El repositorio incluye los archivos del código fuente y el script de la base de datos. Para preparar el entorno, se requiere Visual Studio con soporte para .NET Framework 4.7.2 y Microsoft SQL Server. La base de datos se administra mediante SQL Server Management Studio y la aplicación se ejecuta desde el entorno de desarrollo.
 
 ## Estado actual
 
