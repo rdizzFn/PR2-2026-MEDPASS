@@ -24,7 +24,7 @@ Desarrollar un sistema que permita organizar pacientes y médicos, consultar hor
 
 ## Descripción general
 
-MedPass será desarrollado utilizando C# y .NET Framework, con SQL Server para la gestión de la base de datos.
+MedPass está desarrollado utilizando C# y .NET Framework, con SQL Server para la gestión de la base de datos.
 
 El sistema contempla diferentes roles:
 
@@ -95,6 +95,7 @@ PR2-2026-MEDPASS/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
+├── LICENSE
 └── SECURITY.md
 ```
 
@@ -143,11 +144,40 @@ El sistema utiliza SQL Server y una base de datos denominada `BD_ReservasMedicas
 
 La aplicación utiliza ADO.NET para establecer la conexión y realizar operaciones con la base de datos.
 
-La cadena de conexión debe adaptarse a la instancia de SQL Server del equipo donde se ejecute el proyecto.
+La cadena de conexión se encuentra en `src/ConexionBD.cs` y debe corresponder a la instancia de SQL Server del equipo donde se ejecute el proyecto.
+
+Para más información sobre la preparación de la base de datos, consultar el archivo [database/README.md](database/README.md).
 
 ## Instalación y ejecución
 
-El repositorio incluye los archivos del código fuente y el script de la base de datos. Para preparar el entorno, se requiere Visual Studio con soporte para .NET Framework 4.7.2 y Microsoft SQL Server. La base de datos se administra mediante SQL Server Management Studio y la aplicación se ejecuta desde el entorno de desarrollo.
+### Requisitos previos
+
+- Windows.
+- Visual Studio con soporte para desarrollo de escritorio con .NET.
+- .NET Framework 4.7.2.
+- Microsoft SQL Server.
+- SQL Server Management Studio (SSMS).
+
+### Preparación de la base de datos
+
+1. Abrir SQL Server Management Studio.
+2. Conectarse a una instancia de SQL Server.
+3. Abrir y ejecutar el script `database/BD_ReservasMedicas.sql`.
+4. Verificar que se haya creado la base de datos `BD_ReservasMedicas`.
+
+### Preparación del proyecto
+
+1. Clonar o descargar este repositorio.
+2. Abrir `src/DiseñoReservasMedicas.slnx` con Visual Studio.
+3. Restaurar los paquetes NuGet del proyecto.
+4. Compilar la solución para comprobar que no existan errores.
+
+### Ejecución
+
+1. Verificar que SQL Server esté iniciado y que la base de datos esté disponible.
+2. Ejecutar el proyecto desde Visual Studio mediante la opción **Iniciar**.
+
+**Nota:** Si se utiliza una instancia diferente de SQL Server, será necesario adaptar la cadena de conexión en `src/ConexionBD.cs`.
 
 ## Estado actual
 
