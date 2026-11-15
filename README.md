@@ -70,15 +70,29 @@ PR2-2026-MEDPASS/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   └── PULL_REQUEST_TEMPLATE.md
+├── database/
+│   ├── BD_ReservasMedicas.sql
+│   └── README.md
 ├── docs/
 │   ├── equipo/
 │   ├── planificacion/
 │   ├── presentaciones/
 │   └── proyecto/
 ├── equipo/
-├── README.md
-├── .gitignore
+├── src/
+│   ├── Presentaciones/
+│   ├── Properties/
+│   ├── Resources/
+│   ├── App.config
+│   ├── ConexionBD.cs
+│   ├── DiseñoReservasMedicas.csproj
+│   ├── DiseñoReservasMedicas.slnx
+│   ├── Program.cs
+│   ├── packages.config
+│   └── README.md
 ├── .editorconfig
+├── .gitignore
+├── README.md
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
 └── SECURITY.md
